@@ -7,5 +7,6 @@ export default function Loading() {
 
         <ThreeDot color="#ffbb00" size="medium" text="" textColor="" />
         </div>
+
     );
 }
