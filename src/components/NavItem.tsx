@@ -20,3 +20,4 @@ const NavItem = ({title,params}:{title:string,params:string}) => {
 }
 
 export default NavItem
+
