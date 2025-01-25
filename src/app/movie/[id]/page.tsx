@@ -2,8 +2,7 @@ import React from 'react';
 import { FaFilm, FaStar } from "react-icons/fa";
 import { MdDateRange, MdLanguage } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
-// @ts-ignore
-v
+ 
 
   const MoviePage = async ({ params }: { params: { id: string } }) => {
     const movieId = (await params).id;
