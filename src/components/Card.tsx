@@ -10,19 +10,19 @@ type Movie = {
     original_title?: string;
     poster_path: string;
     vote_average: number;
-  };
-  
-  type CardProps = {
-    results: Movie[];
-  };
+};
 
-  const Card: React.FC<CardProps> = ({ results }) => {
+type CardProps = {
+    results: Movie[];
+};
+
+const Card: React.FC<CardProps> = ({ results }) => {
 
     const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
     return (
         <div className='flex flex-wrap justify-center max-w-8xl mx-auto mt-5'>
-            {results.map((movie: any) => {
+            {results.map((movie) => {
 
                 return <Link href={`/movie/${movie.id}`} key={movie.id}>
                     <div className='w-[320px] h-[466px] m-2 p-2 hover:scale-95 transition-transform duration-300 cursor-pointer  rounded rounded-lg dark:bg-neutral-800 bg-neutral-300' >
