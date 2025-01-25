@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 
 const SearchBox = () => {
   const router = useRouter();
-  const [search, setSearch] = useState('');
-  const handleSearch = (e: any) => {
+  const [search, setSearch] = useState<string>('');
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if(search.trim()){
       console.log(`Searching for: ${search}`);

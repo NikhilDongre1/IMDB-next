@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-const MenuItem = ({title,address,Icon}:{title:string,address:string,Icon:any}) => {
+const MenuItem = ({title,address,Icon}:{title:string,address:string,Icon:React.ComponentType<React.SVGProps<SVGSVGElement>>}) => {
   return (
     <Link href={address} className='hover:text-amber-50'>
         <Icon  className='text-xl sm:hidden'/>
@@ -10,3 +10,4 @@ const MenuItem = ({title,address,Icon}:{title:string,address:string,Icon:any}) =
 }
 
 export default MenuItem
+  
