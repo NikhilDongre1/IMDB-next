@@ -3,7 +3,13 @@ import { FaFilm, FaStar } from "react-icons/fa";
 import { MdDateRange, MdLanguage } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 
-const MoviePage = async ({ params }: { params: any }) => {
+interface MoviePageProps {
+    params: {
+      id: string;
+    };
+  }
+
+const MoviePage = async ({ params }: MoviePageProps ) => {
     const movieId = (await params).id;
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`);
     const data = await response.json();

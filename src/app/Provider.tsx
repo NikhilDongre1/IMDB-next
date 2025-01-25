@@ -1,8 +1,14 @@
 'use client';
+
 import { ThemeProvider } from 'next-themes';
 import { useState, useEffect } from 'react';
 
-const Provider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+
+type ProviderProps = {
+  children: React.ReactNode;
+};
+
+const Provider: React.FC<ProviderProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -10,12 +16,12 @@ const Provider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   }, []);
 
   if (!mounted) {
-    return <div />;  
+    return <div />;
   }
 
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <div className="  min-h-screen select-none transition-colors duration-300">
+      <div className="min-h-screen select-none transition-colors duration-300">
         {children}
       </div>
     </ThemeProvider>
