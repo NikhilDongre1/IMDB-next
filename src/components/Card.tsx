@@ -2,7 +2,22 @@ import React from 'react'
 import { FcRating } from "react-icons/fc";
 import Link from 'next/link';
 
-const Card = ({ results }: { results: any }) => {
+type Movie = {
+    id: number;
+    title?: string;
+    name?: string;
+    original_name?: string;
+    original_title?: string;
+    poster_path: string;
+    vote_average: number;
+  };
+  
+  type CardProps = {
+    results: Movie[];
+  };
+
+  const Card: React.FC<CardProps> = ({ results }) => {
+
     const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
     return (
