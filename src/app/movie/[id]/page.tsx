@@ -25,7 +25,7 @@ type MovieDetails = {
     const { id: movieId } = await params;
     try {
         const data = await tmdbFetch<MovieDetails>(`/movie/${movieId}`);
-        console.log(data)
+        console.log(data);
         const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 
         return (
