@@ -10,9 +10,6 @@ export const metadata: Metadata = {
   title: "IMDB Clone",
   description: "this is a movie database application",
 };
-type ProviderProps = {
-  children: React.ReactNode; 
-};
 
 export default function RootLayout({
   children,
